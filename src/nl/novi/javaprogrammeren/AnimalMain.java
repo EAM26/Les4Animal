@@ -1,6 +1,27 @@
 package nl.novi.javaprogrammeren;
 
+import nl.novi.javaprogrammeren.overerving.*;
+
 public class AnimalMain {
+    public static void main(String[] args) {
+        Lion l1 = new Lion("Sinbad", "male", true, 1);
+        l1.eat("antilope");
+        l1.move();
+        Tigre t1 = new Tigre("Shere Khan", "male", true, 2);
+        t1.eat("Mowgli");
+        t1.move();
+        Wolf w1 = new Wolf("Akela", "male", true, 3);
+        w1.eat("sheep");
+        w1.move();
+        Dog d1 = new Dog("Fido", "female", false, "Jan");
+        Zoo artis = new Zoo();
+        artis.addToZoo(l1);
+        artis.addToZoo(t1);
+        artis.addToZoo(d1);
+        artis.showZooAnimals();
+
+
+    }
     /*
     Het is traditie om overerving uit te leggen met behulp van dieren. Hier ontkomen jullie dus ook niet aan.
 
